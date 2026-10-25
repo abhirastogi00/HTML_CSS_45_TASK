@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fix Overflow Layout</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .card {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+            margin-bottom: 15px;
+            background: #dbeafe;
+            border-radius: 8px;
+            overflow-wrap: anywhere;
+        }
+
+        .long-text {
+            overflow-wrap: anywhere;
+        }
+
+        .scroll-box {
+            max-width: 100%;
+            overflow-x: auto;
+            padding: 10px;
+            background: #e2e8f0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #1e293b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Overflow Layout Fix</h1>
+
+        <div class="card">
+            <h2>Responsive Card</h2>
+            <p>This card fits inside its parent container without breaking the layout.</p>
+        </div>
+
+        <div class="card long-text">
+            <h2>Long Text Example</h2>
+            <p>
+                ThisIsAVeryLongWordThatCouldBreakTheLayoutIfOverflowIsNotHandledProperly123456789
+            </p>
+        </div>
+
+        <h2>Scrollable Content</h2>
+        <div class="scroll-box">
+            This content stays inside its box and can scroll horizontally if needed.
+        </div>
+    </div>
+
+</body>
+</html>
