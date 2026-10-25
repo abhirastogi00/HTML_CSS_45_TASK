@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Hero</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f8fafc;
+        }
+
+        .hero {
+            position: relative;
+            min-height: 450px;
+            padding: 80px 8%;
+            background: #e0f2fe;
+            overflow: hidden;
+        }
+
+        .circle {
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: #38bdf8;
+            top: 60px;
+            right: 10%;
+            z-index: 1;
+        }
+
+        .small-circle {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #0f766e;
+            top: 220px;
+            right: 25%;
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 500px;
+            z-index: 3;
+        }
+
+        h1 {
+            font-size: 42px;
+            color: #0f172a;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #334155;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #0f766e;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 60px 6%;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .circle {
+                right: -100px;
+                opacity: 0.6;
+            }
+
+            .small-circle {
+                right: 10%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="circle"></div>
+        <div class="small-circle"></div>
+
+        <div class="hero-content">
+            <h1>Build Your Future</h1>
+            <p>
+                Learn new skills, explore creative ideas,
+                and take the next step toward your goals.
+            </p>
+            <a href="#" class="btn">Get Started</a>
+        </div>
+    </section>
+
+</body>
+</html>
