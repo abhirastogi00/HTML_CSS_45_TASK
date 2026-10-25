@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - Task 43</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #1e293b;
+            background: #f8fafc;
+        }
+
+        /* Flexbox: Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 20px 8%;
+            background: white;
+        }
+
+        nav h2 {
+            margin: 0;
+            color: #2563eb;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #334155;
+        }
+
+        /* Grid: Main landing page */
+        .hero {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            align-items: center;
+            gap: 40px;
+            padding: 70px 8%;
+        }
+
+        .hero-text h1 {
+            font-size: 42px;
+            margin-top: 0;
+        }
+
+        .hero-text p {
+            line-height: 1.7;
+            color: #64748b;
+        }
+
+        /* Flexbox: Buttons */
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            background: #2563eb;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #e2e8f0;
+            color: #1e293b;
+        }
+
+        /* Grid: Feature cards */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            padding: 20px 8% 60px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px #0000000d;
+        }
+
+        .hero-art {
+            background: #dbeafe;
+            border-radius: 20px;
+            padding: 60px 20px;
+            text-align: center;
+            font-size: 70px;
+        }
+
+        footer {
+            text-align: center;
+            background: #1e293b;
+            color: white;
+            padding: 20px;
+        }
+
+        /* Tablet */
+        @media (max-width: 800px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 45px 6%;
+            }
+
+            .features {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                padding-left: 6%;
+                padding-right: 6%;
+            }
+
+            .hero-text h1 {
+                font-size: 34px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 550px) {
+            nav {
+                padding: 18px 5%;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .hero-art {
+                padding: 35px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>LaunchPad</h2>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-text">
+                <h1>Build Something Amazing</h1>
+                <p>
+                    Create modern websites with simple tools,
+                    clean designs, and responsive layouts.
+                    Start your next project today.
+                </p>
+
+                <div class="buttons">
+                    <a href="#features" class="btn">Get Started</a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+
+            <div class="hero-art">
+                🚀
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="feature-card">
+                <h3>Responsive Design</h3>
+                <p>Pages adapt to mobile, tablet, and desktop screens.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Clean Layout</h3>
+                <p>Grid and Flexbox keep content organized and aligned.</p>
+            </div>
+
+            <div class="feature-card" id="about">
+                <h3>Easy to Use</h3>
+                <p>A simple starting point for your next website project.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 LaunchPad. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
