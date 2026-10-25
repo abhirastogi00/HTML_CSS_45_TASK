@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Audit - Task 42</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+        }
+
+        header, footer {
+            background: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 220px minmax(0, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        aside, .card {
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        aside {
+            background: #cbd5e1;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 15px;
+            min-width: 0;
+        }
+
+        .card {
+            background: white;
+            overflow-wrap: anywhere;
+            box-shadow: 0 2px 6px #00000015;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Tablet breakpoint */
+        @media (max-width: 900px) {
+            .layout {
+                grid-template-columns: 180px minmax(0, 1fr);
+                padding: 12px;
+                gap: 12px;
+            }
+
+            .products {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        /* Mobile breakpoint */
+        @media (max-width: 600px) {
+            .layout {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .products {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            header, footer {
+                padding: 14px;
+            }
+
+            aside, .card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Product Dashboard</h1>
+        <p>Responsive Design Audit - Task 42</p>
+    </header>
+
+    <div class="layout">
+        <aside>
+            <h2>Sidebar</h2>
+            <p>Home</p>
+            <p>Products</p>
+            <p>About</p>
+            <p>Contact</p>
+        </aside>
+
+        <main class="products">
+            <div class="card">
+                <h3>Product 1</h3>
+                <p>Price: ₹499</p>
+            </div>
+
+            <div class="card">
+                <h3>Product 2</h3>
+                <p>Price: ₹699</p>
+            </div>
+
+            <div class="card">
+                <h3>Product 3</h3>
+                <p>Price: ₹899</p>
+            </div>
+
+            <div class="card">
+                <h3>Product 4</h3>
+                <p>Price: ₹999</p>
+            </div>
+
+            <div class="card">
+                <h3>Product 5</h3>
+                <p>Price: ₹599</p>
+            </div>
+
+            <div class="card">
+                <h3>Product 6</h3>
+                <p>Price: ₹799</p>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>Responsive layout tested on different screen sizes.</p>
+    </footer>
+
+</body>
+</html>
