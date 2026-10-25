@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-Based Project</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+
+        .page {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+        }
+
+        .header {
+            grid-area: header;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 20px 30px;
+            background: #1e293b;
+            color: white;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            padding: 25px 20px;
+            background: #dbeafe;
+        }
+
+        .sidebar a {
+            display: block;
+            margin: 18px 0;
+            color: #1e40af;
+            text-decoration: none;
+        }
+
+        .main {
+            grid-area: main;
+            padding: 30px;
+        }
+
+        .main h2 {
+            margin-top: 0;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            padding: 18px;
+            text-align: center;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .product-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 130px;
+            background: #e0f2fe;
+            border-radius: 8px;
+            font-size: 48px;
+        }
+
+        .price {
+            color: #0f766e;
+            font-weight: bold;
+            font-size: 19px;
+        }
+
+        button {
+            padding: 10px 16px;
+            border: none;
+            border-radius: 6px;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+        }
+
+        .footer {
+            grid-area: footer;
+            padding: 18px;
+            text-align: center;
+            background: #1e293b;
+            color: white;
+        }
+
+        @media (max-width: 650px) {
+            .page {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "main"
+                    "footer";
+            }
+
+            .sidebar {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+                align-items: center;
+                padding: 15px;
+            }
+
+            .sidebar h2 {
+                width: 100%;
+                margin: 0;
+            }
+
+            .sidebar a {
+                margin: 0;
+            }
+
+            .main {
+                padding: 20px 15px;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page">
+
+        <header class="header">
+            <h1>ShopZone</h1>
+            <a href="#products">Explore Products</a>
+        </header>
+
+        <aside class="sidebar">
+            <h2>Categories</h2>
+            <a href="#products">All Products</a>
+            <a href="#electronics">Electronics</a>
+            <a href="#fashion">Fashion</a>
+            <a href="#accessories">Accessories</a>
+        </aside>
+
+        <main class="main" id="products">
+            <h2>Featured Products</h2>
+
+            <div class="product-grid">
+                <div class="product-card" id="electronics">
+                    <div class="product-image">🎧</div>
+                    <h3>Headphones</h3>
+                    <p class="price">₹1,499</p>
+                    <button type="button">View Product</button>
+                </div>
+
+                <div class="product-card" id="accessories">
+                    <div class="product-image">⌚</div>
+                    <h3>Smart Watch</h3>
+                    <p class="price">₹2,499</p>
+                    <button type="button">View Product</button>
+                </div>
+
+                <div class="product-card" id="fashion">
+                    <div class="product-image">👟</div>
+                    <h3>Sports Shoes</h3>
+                    <p class="price">₹1,999</p>
+                    <button type="button">View Product</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">🎒</div>
+                    <h3>Backpack</h3>
+                    <p class="price">₹999</p>
+                    <button type="button">View Product</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Grid-Based Project | HTML & CSS</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
