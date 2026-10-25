@@ -1,0 +1,3 @@
+Design Choices
+
+I used navy blue and teal colours to give the website a clean and professional look. Arial is used as the main font because it is simple and readable. White content areas, rounded corners and consistent spacing improve readability. A shared CSS file keeps the design consistent across all four pages. The navigation links make it easy to move between pages.
