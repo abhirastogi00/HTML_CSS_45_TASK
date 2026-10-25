@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title><style>
+    /* 1. Element Selector */
+    p {
+        color: #333333;
+        font-size: 18px;
+    }
+
+    /* 2. Class Selector */
+    .highlight {
+        background-color: lightyellow;
+        padding: 10px;
+    }
+
+    /* 3. ID Selector */
+    #main-heading {
+        color: navy;
+        text-align: center;
+    }
+
+    /* 4. Descendant Selector */
+    nav a {
+        color: darkgreen;
+        text-decoration: none;
+        margin: 10px;
+    }
+</style>
+
+</head>
+<body><h1 id="main-heading">My College Website</h1>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#course">Course</a>
+</nav>
+
+<h2 id="home">Welcome</h2>
+<p>This page demonstrates four different CSS selectors.</p>
+
+<h2 id="about">About My College</h2>
+<p class="highlight">I study at Invertis University, Bareilly.</p>
+
+<h2 id="course">My Course</h2>
+<p>I am studying BCA in Artificial Intelligence.</p>
+
+</body>
+</html>
