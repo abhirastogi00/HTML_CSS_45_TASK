@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Layout</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+        }
+
+        .dashboard {
+            display: grid;
+            min-height: 100vh;
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: 70px 1fr 50px;
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+        }
+
+        .header {
+            grid-area: header;
+            display: flex;
+            align-items: center;
+            padding: 0 25px;
+            background: #1e293b;
+            color: white;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            padding: 25px;
+            background: #334155;
+            color: white;
+        }
+
+        .sidebar a {
+            display: block;
+            margin-bottom: 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .main {
+            grid-area: main;
+            padding: 25px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .card {
+            padding: 25px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .footer {
+            grid-area: footer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #1e293b;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto 1fr 50px;
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "main"
+                    "footer";
+            }
+
+            .sidebar {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+                padding: 15px;
+            }
+
+            .sidebar a {
+                margin-bottom: 0;
+            }
+
+            .main {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <header class="header">
+            <h2>My Dashboard</h2>
+        </header>
+
+        <aside class="sidebar">
+            <a href="#home">Home</a>
+            <a href="#analytics">Analytics</a>
+            <a href="#reports">Reports</a>
+            <a href="#settings">Settings</a>
+        </aside>
+
+        <main class="main">
+            <h1>Dashboard Overview</h1>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>Total Users</h3>
+                    <p>1,250</p>
+                </div>
+
+                <div class="card">
+                    <h3>Total Sales</h3>
+                    <p>₹25,000</p>
+                </div>
+
+                <div class="card">
+                    <h3>Orders</h3>
+                    <p>320</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Dashboard Project</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
