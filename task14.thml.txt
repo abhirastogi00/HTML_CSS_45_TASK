@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My College Portfolio</title>
+</head>
+<body>
+
+    <header>
+        <h1>My College Portfolio</h1>
+        <p>Welcome to my student page</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a> |
+        <a href="#course">My Course</a> |
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a first-semester BCA AI student at Invertis University.</p>
+        </section>
+
+        <section id="course">
+            <h2>My Course</h2>
+            <ul>
+                <li>HTML and CSS</li>
+                <li>Java Programming</li>
+                <li>Mathematics</li>
+            </ul>
+        </section>
+
+        <aside>
+            <h3>My Goal</h3>
+            <p>I want to become a software developer.</p>
+        </aside>
+    </main>
+
+    <footer id="contact">
+        <p>Student Portfolio | Invertis University</p>
+    </footer>
+
+</body>
+</html>
