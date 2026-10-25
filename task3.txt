@@ -1,0 +1,40 @@
+Task 3: Terminal Navigation Practice Sheet
+
+1. Print Current Directory
+
+Command: "pwd"
+Purpose: Shows the current working directory.
+
+2. List Files and Folders
+
+Command: "dir"
+Purpose: Displays files and folders in the current directory on Windows.
+
+3. Change Directory
+
+Command: "cd foldername"
+Purpose: Moves into the specified folder.
+
+4. Move to Parent Directory
+
+Command: "cd .."
+Purpose: Moves one level up from the current directory.
+
+5. Clear the Terminal
+
+Command: "cls"
+Purpose: Clears the Command Prompt screen.
+
+6. Create a New Folder
+
+Command: "mkdir practice"
+Purpose: Creates a folder named practice.
+
+7. Display Node.js Version
+
+Command: "node -v"
+Purpose: Shows the installed Node.js version.
+
+Conclusion
+
+These commands help me navigate folders, manage files, and use the terminal on Windows.S
