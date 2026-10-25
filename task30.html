@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+        }
+
+        .profile-card {
+            width: 320px;
+            padding: 30px;
+            text-align: center;
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: #dbeafe;
+            color: #1d4ed8;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        h2 {
+            margin-bottom: 8px;
+            color: #1e293b;
+        }
+
+        .role {
+            color: #0f766e;
+            font-weight: bold;
+        }
+
+        p {
+            color: #64748b;
+            line-height: 1.5;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <div class="avatar">AR</div>
+
+        <h2>Abhi Rastogi</h2>
+        <div class="role">BCA AI Student</div>
+
+        <p>
+            Learning web development and programming.
+            Interested in technology and building new projects.
+        </p>
+
+        <a href="mailto:student@example.com" class="button">
+            Contact Me
+        </a>
+    </div>
+
+</body>
+</html>
