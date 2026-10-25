@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e293b;
+            margin-bottom: 30px;
+        }
+
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .product-card {
+            flex: 1 1 220px;
+            max-width: 280px;
+            padding: 20px;
+            text-align: center;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .product-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 150px;
+            background: #dbeafe;
+            border-radius: 8px;
+            font-size: 50px;
+        }
+
+        h2 {
+            color: #334155;
+            font-size: 20px;
+        }
+
+        .price {
+            color: #0f766e;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Our Products</h1>
+
+    <div class="product-list">
+
+        <div class="product-card">
+            <div class="product-image">🎧</div>
+            <h2>Wireless Headphones</h2>
+            <p class="price">₹1,499</p>
+            <button type="button">View Product</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">⌚</div>
+            <h2>Smart Watch</h2>
+            <p class="price">₹2,499</p>
+            <button type="button">View Product</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">🎒</div>
+            <h2>Travel Backpack</h2>
+            <p class="price">₹999</p>
+            <button type="button">View Product</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">👟</div>
+            <h2>Sports Shoes</h2>
+            <p class="price">₹1,999</p>
+            <button type="button">View Product</button>
+        </div>
+
+    </div>
+
+</body>
+</html>
