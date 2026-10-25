@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaunchPad - Responsive Landing Page</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #1e293b;
+            background: #f8fafc;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 20px 8%;
+            background: white;
+        }
+
+        .logo {
+            margin: 0;
+            color: #2563eb;
+            font-size: 26px;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px;
+        }
+
+        nav a {
+            color: #334155;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            align-items: center;
+            gap: 40px;
+            padding: 70px 8%;
+        }
+
+        .hero-content h1 {
+            margin-top: 0;
+            font-size: clamp(30px, 4vw, 48px);
+        }
+
+        .hero-content p {
+            color: #64748b;
+            line-height: 1.8;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 6px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+        }
+
+        .button.secondary {
+            background: #e2e8f0;
+            color: #1e293b;
+        }
+
+        .hero-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 280px;
+            background: #dbeafe;
+            border-radius: 20px;
+            font-size: 90px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            padding: 20px 8% 60px;
+        }
+
+        .feature-card {
+            padding: 25px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px #00000010;
+            overflow-wrap: anywhere;
+        }
+
+        .feature-card p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        footer {
+            padding: 20px;
+            background: #1e293b;
+            color: white;
+            text-align: center;
+        }
+
+        /* Tablet */
+        @media (max-width: 800px) {
+            header {
+                padding: 18px 5%;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                padding: 45px 5%;
+            }
+
+            .hero-image {
+                min-height: 220px;
+            }
+
+            .features {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 550px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            .hero {
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+
+            .hero-image {
+                min-height: 180px;
+                font-size: 65px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2 class="logo">LaunchPad</h2>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Build Something Amazing</h1>
+
+                <p>
+                    Create modern, responsive websites with clean design,
+                    useful features, and a great user experience.
+                    Start your next project today.
+                </p>
+
+                <div class="buttons">
+                    <a href="#features" class="button">Get Started</a>
+                    <a href="#about" class="button secondary">Learn More</a>
+                </div>
+            </div>
+
+            <div class="hero-image" aria-label="Rocket illustration">
+                🚀
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="feature-card">
+                <h3>Responsive Design</h3>
+                <p>Works across mobile phones, tablets, and desktops.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Clean Layout</h3>
+                <p>Grid and Flexbox keep content organized and readable.</p>
+            </div>
+
+            <div class="feature-card" id="about">
+                <h3>Easy to Use</h3>
+                <p>Simple navigation and clear sections make browsing easy.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 LaunchPad. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
