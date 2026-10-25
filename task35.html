@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Landing Page</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+        }
+
+        .landing {
+            padding: 60px 8%;
+            background: #e0f2fe;
+            text-align: center;
+        }
+
+        .landing h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .landing p {
+            max-width: 600px;
+            margin: 0 auto 25px;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #475569;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 8%;
+        }
+
+        .feature-card {
+            flex: 1 1 220px;
+            max-width: 320px;
+            padding: 25px;
+            background: white;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .feature-card h2 {
+            color: #0f766e;
+        }
+
+        .feature-card p {
+            color: #64748b;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 600px) {
+            .landing {
+                padding: 45px 6%;
+            }
+
+            .landing h1 {
+                font-size: 32px;
+            }
+
+            .features {
+                padding: 30px 6%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="landing">
+        <h1>Learn, Create and Grow</h1>
+        <p>
+            Explore new skills, build useful projects,
+            and take the next step toward your future.
+        </p>
+        <a href="#features" class="btn">Explore Features</a>
+    </section>
+
+    <section class="features" id="features">
+        <div class="feature-card">
+            <h2>Learn</h2>
+            <p>Develop your knowledge with new learning opportunities.</p>
+        </div>
+
+        <div class="feature-card">
+            <h2>Create</h2>
+            <p>Turn your ideas into creative and useful projects.</p>
+        </div>
+
+        <div class="feature-card">
+            <h2>Grow</h2>
+            <p>Improve your skills and prepare for future opportunities.</p>
+        </div>
+    </section>
+
+</body>
+</html>
