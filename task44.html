@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - Task 44</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #1e293b;
+            background: #f8fafc;
+        }
+
+        header {
+            background: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #2563eb;
+            font-size: 24px;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #334155;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            padding: 70px 8%;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 44px;
+            margin-top: 0;
+        }
+
+        .hero-content p {
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        .hero-image {
+            flex: 1;
+            background: #dbeafe;
+            padding: 80px 20px;
+            text-align: center;
+            font-size: 70px;
+            border-radius: 16px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 6px;
+            margin-top: 15px;
+        }
+
+        .features {
+            display: flex;
+            gap: 20px;
+            padding: 20px 8% 60px;
+        }
+
+        .feature-card {
+            flex: 1;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #00000010;
+        }
+
+        footer {
+            background: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2 class="logo">LaunchPad</h2>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Build Something Amazing</h1>
+                <p>
+                    Create clean and modern websites with a simple,
+                    professional design. Start your next project today.
+                </p>
+                <a href="#features" class="button">Get Started</a>
+            </div>
+
+            <div class="hero-image">
+                🚀
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="feature-card">
+                <h3>Modern Design</h3>
+                <p>Clean layouts and readable typography.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Easy to Use</h3>
+                <p>Simple sections with clear navigation.</p>
+            </div>
+
+            <div class="feature-card" id="about">
+                <h3>Great Experience</h3>
+                <p>A useful starting point for a landing page.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 LaunchPad. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
