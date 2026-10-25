@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+</head>
+<body>
+
+    <h1>Job Application Form</h1>
+
+    <form>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <label for="password">Create Password:</label>
+        <input type="password" id="password" name="password">
+        <br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+        <br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="18">
+        <br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+        <br><br>
+
+        <label for="interview">Preferred Interview Time:</label>
+        <input type="time" id="interview" name="interview">
+        <br><br>
+
+        <label for="available">Available From:</label>
+        <input type="datetime-local" id="available" name="available">
+        <br><br>
+
+        <label for="month">Preferred Joining Month:</label>
+        <input type="month" id="month" name="month">
+        <br><br>
+
+        <label for="week">Preferred Joining Week:</label>
+        <input type="week" id="week" name="week">
+        <br><br>
+
+        <p>Gender:</p>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+        <br><br>
+
+        <p>Skills:</p>
+        <input type="checkbox" id="html" name="skills" value="HTML">
+        <label for="html">HTML</label>
+        <input type="checkbox" id="css" name="skills" value="CSS">
+        <label for="css">CSS</label>
+        <input type="checkbox" id="java" name="skills" value="Java">
+        <label for="java">Java</label>
+        <br><br>
+
+        <label for="resume">Upload Resume:</label>
+        <input type="file" id="resume" name="resume">
+        <br><br>
+
+        <label for="color">Choose a Theme Color:</label>
+        <input type="color" id="color" name="color">
+        <br><br>
+
+        <label for="experience">Experience Level (0-10):</label>
+        <input type="range" id="experience" name="experience" min="0" max="10">
+        <br><br>
+
+        <label for="website">Portfolio URL:</label>
+        <input type="url" id="website" name="website">
+        <br><br>
+
+        <label for="search">Search Job Role:</label>
+        <input type="search" id="search" name="search">
+        <br><br>
+
+        <input type="hidden" name="formType" value="jobApplication">
+
+        <input type="button" value="Check Form" onclick="alert('Please review your details.')">
+        <input type="submit" value="Apply Now">
+        <input type="reset" value="Clear Form">
+    </form>
+
+</body>
+</html>
