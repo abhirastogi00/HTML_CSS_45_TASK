@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Product Grid</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 20px 30px;
+            background: #1e293b;
+            color: white;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 25px;
+            padding: 25px;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        .sidebar {
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            align-self: start;
+        }
+
+        .sidebar h2 {
+            font-size: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            margin: 15px 0;
+            color: #334155;
+            text-decoration: none;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            padding: 18px;
+            background: white;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+        }
+
+        .product-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 130px;
+            background: #dbeafe;
+            border-radius: 8px;
+            font-size: 48px;
+        }
+
+        .product-card h3 {
+            color: #1e293b;
+        }
+
+        .price {
+            color: #0f766e;
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px 16px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 700px) {
+            .layout {
+                grid-template-columns: 1fr;
+                padding: 15px;
+            }
+
+            .sidebar {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .sidebar h2 {
+                width: 100%;
+                margin: 0;
+            }
+
+            .sidebar a {
+                margin: 5px 0;
+            }
+
+            .products {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>ShopZone</h1>
+        <a href="#products">Browse Products</a>
+    </header>
+
+    <div class="layout">
+
+        <aside class="sidebar">
+            <h2>Categories</h2>
+            <a href="#products">All Products</a>
+            <a href="#electronics">Electronics</a>
+            <a href="#fashion">Fashion</a>
+            <a href="#accessories">Accessories</a>
+        </aside>
+
+        <main class="products" id="products">
+
+            <div class="product-card" id="electronics">
+                <div class="product-image">🎧</div>
+                <h3>Headphones</h3>
+                <p class="price">₹1,499</p>
+                <button type="button">View Product</button>
+            </div>
+
+            <div class="product-card" id="accessories">
+                <div class="product-image">⌚</div>
+                <h3>Smart Watch</h3>
+                <p class="price">₹2,499</p>
+                <button type="button">View Product</button>
+            </div>
+
+            <div class="product-card" id="fashion">
+                <div class="product-image">👟</div>
+                <h3>Sports Shoes</h3>
+                <p class="price">₹1,999</p>
+                <button type="button">View Product</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🎒</div>
+                <h3>Backpack</h3>
+                <p class="price">₹999</p>
+                <button type="button">View Product</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">📱</div>
+                <h3>Smartphone</h3>
+                <p class="price">₹14,999</p>
+                <button type="button">View Product</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🕶️</div>
+                <h3>Sunglasses</h3>
+                <p class="price">₹799</p>
+                <button type="button">View Product</button>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>
